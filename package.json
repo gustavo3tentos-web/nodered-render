@@ -1,0 +1,10 @@
+{
+  "name": "nodered-render",
+  "private": true,
+  "dependencies": {
+    "@flowfuse/node-red-dashboard": "^1.30.2",
+    "node-red-contrib-telegrambot": "^17.0.5",
+    "node-red": "^4.1.5",
+    "@flowfuse/nr-assistant": "^0.10.2"
+  }
+}

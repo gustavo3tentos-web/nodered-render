@@ -1,0 +1,436 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a423f5a34d5e64a4",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "877d68d07093737e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "0c2f91f0b1f54a9ba2698f74b3ae003c.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "a423f5a34d5e64a4",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7504fa30c7f6a31e",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "bf269b46807c6cd7",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "8436b021823133af",
+        "type": "ui-page",
+        "name": "Telemetria_1",
+        "ui": "7504fa30c7f6a31e",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "bf269b46807c6cd7",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "4a884f64ebc3890e",
+        "type": "ui-page",
+        "name": "Telemetria_2",
+        "ui": "7504fa30c7f6a31e",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "bf269b46807c6cd7",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "7331fdf47abbf4c1",
+        "type": "ui-group",
+        "name": "Telemetria",
+        "page": "8436b021823133af",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "3cc11d24.ff01a2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4df00a4a109b2960",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 2",
+        "func": "// Configurações\nconst LIMITE_ALARME = 75.0;        // entra\nconst LIMITE_NORMAL = 65.0;        // sai\nconst REENVIO_MS = 60 * 60 * 1000;     // 1 hora (0 para desativar)\n\nconst temp = Number(msg.payload);\nconst now = Date.now();\n\nlet alarmado = context.get(\"alarmado\") || false;\nlet ultimoEnvio = context.get(\"ultimoEnvio\") || 0;\n\nlet deveEnviar = false;\nlet tipo = null;\n\n// entrou em alarme\nif (!alarmado && temp >= LIMITE_ALARME) {\n  alarmado = true;\n  deveEnviar = true;\n  tipo = \"ALARME\";\n}\n// voltou ao normal\nelse if (alarmado && temp <= LIMITE_NORMAL) {\n  alarmado = false;\n  deveEnviar = true;\n  tipo = \"NORMAL\";\n}\n// reenvio periódico enquanto segue em alarme\nelse if (alarmado && REENVIO_MS > 0 && (now - ultimoEnvio) >= REENVIO_MS) {\n  deveEnviar = true;\n  tipo = \"RENOTIF\";\n}\n\ncontext.set(\"alarmado\", alarmado);\nif (!deveEnviar) return null;\ncontext.set(\"ultimoEnvio\", now);\n\n// passa adiante dados para o Telegram\nmsg.alerta = { tipo, temp, ts: now };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 300,
+        "wires": [
+            [
+                "538fa1720636218f"
+            ]
+        ]
+    },
+    {
+        "id": "c7b7d074a7d05b8e",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "teste/nodered",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "877d68d07093737e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "9316134039336e3d"
+            ]
+        ]
+    },
+    {
+        "id": "9316134039336e3d",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 1",
+        "func": "let v = Number(String(msg.payload).replace(\",\", \".\"));\nif (Number.isNaN(v)) {\n    node.warn(\"Payload não numérico: \" + msg.payload);\n    return null; // descarta\n}\n\nmsg.payload = v;\nmsg.timestamp = Date.now(); // ms desde 1970\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "612e762ad26b8504",
+                "4df00a4a109b2960",
+                "771ddf477dd1fc97",
+                "d8008537d29ec22b"
+            ]
+        ]
+    },
+    {
+        "id": "612e762ad26b8504",
+        "type": "ui-gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "7331fdf47abbf4c1",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": "4",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperatura",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "",
+        "icon": "",
+        "prefix": "",
+        "suffix": "°C",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "66",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "75",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "120",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 550,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "771ddf477dd1fc97",
+        "type": "ui-chart",
+        "z": "f6f2187d.f17ca8",
+        "group": "7331fdf47abbf4c1",
+        "name": "Temp.",
+        "label": "Temperatura",
+        "order": 9007199254740991,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "3",
+        "height": "5",
+        "className": "",
+        "interpolation": "linear",
+        "x": 530,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "538fa1720636218f",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 3",
+        "func": "const token = \"8562340936:AAGJ70jxuj7gErgzWLYXrD3vvZ85N6wJqmQ\";\nconst chatId = 1142646642; // número\n\nconst { tipo, temp, ts } = msg.alerta;\nconst hora = new Date(ts).toLocaleString(\"pt-BR\");\n\nlet text;\nif (tipo === \"ALARME\") {\n  text = `ALERTA: Temperatura ALTA!\\nTemp: ${temp} °C\\nHorário: ${hora}`;\n} else if (tipo === \"NORMAL\") {\n  text = `OK: Temperatura normalizou.\\nTemp: ${temp} °C\\nHorário: ${hora}`;\n} else { // RENOTIF\n  text = `ALERTA (1h): Ainda em ALARME.\\nTemp: ${temp} °C\\nHorário: ${hora}`;\n}\n\nmsg.method = \"POST\";\nmsg.url = `https://api.telegram.org/bot${token}/sendMessage`;\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = { chat_id: chatId, text };\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 300,
+        "wires": [
+            [
+                "36f18adba1e6061b"
+            ]
+        ]
+    },
+    {
+        "id": "36f18adba1e6061b",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 900,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d8008537d29ec22b",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "c4c718c3eead3add",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.30.2"
+        }
+    }
+]
